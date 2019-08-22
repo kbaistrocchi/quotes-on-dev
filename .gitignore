@@ -49,7 +49,7 @@ plugins/*
 # Ignore everything in "themes" except the active theme. #
 # ========================================================== #
 themes/*
-!themes/inhabitent
+!themes/quotesondev
 
 # Ignore WP Migrate DB Dir #
 # =============== #
