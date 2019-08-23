@@ -74,9 +74,20 @@ table {
 
 // Custom Styling
 
-.quote-tag {
+.quote-title-tag {
   span {
     color: $color__text-screen;
     font-family: 'Exo light-italic';
   }
+}
+
+.quote-text {
+  p {
+    font-family: $font__main;
+  }
+}
+
+.author-area p, .author-area span {
+  font-size: 1.5rem;
+  display: inline-block;
 }

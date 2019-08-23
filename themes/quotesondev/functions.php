@@ -21,6 +21,7 @@ function qod_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html( 'Primary Menu' ),
+		'footer' => 'Footer Menu'
 	) );
 
 	// Switch search form, comment form, and comments to output valid HTML5.
@@ -86,11 +87,11 @@ require get_template_directory() . '/inc/api.php';
 // API
 function red_scripts() {
 	// saving scripts into a variable
-	$script_url = get_template_directory_uri() . '/js/scripts.js';
+	$script_url = get_template_directory_uri() . '/build/js/scripts.min.js';
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'red_comments', $script_url, array( 'jquery' ), false, true );
+	wp_enqueue_script( 'dev_quotes', $script_url, array( 'jquery' ), false, true );
 	// create a variable called red_vars in server and give it the following properties
-   wp_localize_script( 'red_comments', 'red_vars', array(
+   wp_localize_script( 'dev_quotes', 'red_vars', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
    ) );

@@ -5,10 +5,12 @@
 /* Links */
 
 a {
-	color: $color__link;
+	color: $color__text-screen;
+	text-decoration: none;
 
 	&:visited {
-		color: $color__link-visited;
+		// color: $color__link-visited;
+		color: $color__text-screen;
 	}
 	&:hover,
 	&:focus,
@@ -129,4 +131,12 @@ a {
 		text-align: right;
 		width: 50%;
 	}
+}
+
+// Custom Styling
+.menu {
+	li a {
+		color: $color__text-screen;
+	}
+	
 }

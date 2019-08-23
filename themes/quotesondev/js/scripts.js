@@ -31,10 +31,10 @@
         $quoteZone.append(`<h2>${theQuote}</h2>`)
         $authorArea.append(`<p>-${author}</p>`)
         if (source && sourceUrl) {
-            $authorArea.append(`<a href="${sourceUrl}"><p class="quote-source">, ${source}</p></a>`)
+            $authorArea.append(`<span>, </span><a href="${sourceUrl}"><p class="quote-source">${source}</p></a>`)
         }
         else if (source) {
-            $authorArea.append(`<p class="quote-source">, ${source}</p>`)
+            $authorArea.append(`<span>, </span><p class="quote-source">${source}</p>`)
         }
 
        });

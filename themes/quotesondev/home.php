@@ -23,10 +23,10 @@ get_header(); ?>
                     $initial_post->the_post(); ?>
                 
                     <div class="the-quote-zone">
-                        <h2><?php the_content(); ?></h2>
+                        <h3 class="quote-text"><?php the_content(); ?></h3>
                     </div>
                     <div class="author-area">
-                        <p>-<?php the_title()?></p>
+                        <p class="mobile-author">-<?php the_title()?></p>
 
                     </div>
                     <?php  
@@ -38,7 +38,7 @@ get_header(); ?>
                         ?>
 
 		
-        <button class="show-more">Click to show more</button>
+        <button class="show-more">Show me another!</button>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
