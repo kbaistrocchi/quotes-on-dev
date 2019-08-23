@@ -56,7 +56,7 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
-	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'qod-style', get_stylesheet_uri(), NULL, microtime());
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );

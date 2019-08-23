@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            <h1>quotes <span>on</span> dev_</h1>
+            <!-- <h1>quotes <span>on</span> dev_</h1> -->
 
             <?php
             $args = array(

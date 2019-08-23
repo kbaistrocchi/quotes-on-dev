@@ -33,3 +33,4 @@
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
+				<h1 class="quote-tag">quotes <span>on</span> dev_</h1>

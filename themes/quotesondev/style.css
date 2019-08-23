@@ -1,5 +1,5 @@
 /*!
-Theme Name: Quotes on Dev Starter Theme
+Theme Name: Quotes on Dev
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -221,6 +221,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo italic';
+  src: url("../../fonts/Exo-MediumItalic.eot");
+  src: url("../../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../fonts/Exo-MediumItalic.woff") format("woff"), url("../../fonts/Exo-MediumItalic.ttf") format("truetype"), url("../../fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo light';
+  src: url("../../fonts/Exo-Light.eot");
+  src: url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype"), url("../../fonts/Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo light-italic';
+  src: url("../../fonts/Exo-LightItalic.eot");
+  src: url("../../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-LightItalic.woff2") format("woff2"), url("../../fonts/Exo-LightItalic.woff") format("woff"), url("../../fonts/Exo-LightItalic.ttf") format("truetype"), url("../../fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo medium';
+  src: url("../../fonts/Exo-Medium.eot");
+  src: url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.ttf") format("truetype"), url("../../fonts/Exo-Medium.svg#Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -229,14 +257,18 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: "Exo light", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: 'Exo light-italic'; }
+
+h1 {
+  font-size: 3rem; }
 
 /* Copy */
 p {
@@ -292,7 +324,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -339,6 +371,10 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+.quote-tag span {
+  color: #00cc00;
+  font-family: 'Exo light-italic'; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -504,7 +540,7 @@ a {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: #00cc00;
     display: block;
     font-size: .875rem;
     font-weight: bold;
@@ -593,3 +629,4 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+/* Home Page */
