@@ -85,32 +85,32 @@ require get_template_directory() . '/inc/metaboxes.php';
 require get_template_directory() . '/inc/api.php';
 
 // API
-function red_scripts() {
-	// saving scripts into a variable
-	$script_url = get_template_directory_uri() . '/build/js/scripts.min.js';
+function quote_scripts() {
+	// saving scripts into a variable - CHANGE TO MINIFIED LOCATION BEFORE DEPLOYMENT
+	$script_url = get_template_directory_uri() . '/js/scripts.js';
 	// wp_enqueue_script( 'jquery' );
 	// first parameter is the id of the script/stylesheet, 2nd- source of the script, 3rd(optional) array of script handles(ex. jquery)
 	// 4th - version no. 5th - in the footer or not (default is false)
 	wp_enqueue_script( 'dev_quotes', $script_url, array( 'jquery' ), microtime(), true );
 	// create a variable called red_vars in server and give it the following properties
-   wp_localize_script( 'dev_quotes', 'red_vars', array(
+   wp_localize_script( 'dev_quotes', 'dev_quote', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
    ) );
  }
- add_action( 'wp_enqueue_scripts', 'red_scripts' );
+ add_action( 'wp_enqueue_scripts', 'quote_scripts' );
 
  // Submit Quote Form
-function quote_submit() {
-	// saving scripts into a variable
-	$submit_script_url = get_template_directory_uri() . '/js/form-submission.js' ;
-	// wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'quote-submission', $submit_script_url, array( 'jquery' ), microtime(), true );
-	// create a variable in server and give it the following properties
-   wp_localize_script( 'quote-submission', 'new_quote', array(
-	   'rest_url' => esc_url_raw( rest_url() ),
-	   'wpapi_nonce' => wp_create_nonce( 'wp_create_post' ),
-   ) );
- }
- add_action( 'wp_enqueue_scripts', 'quote_submit' );
+// function quote_submit() {
+// 	// saving scripts into a variable
+// 	$submit_script_url = get_template_directory_uri() . '/js/form-submission.js' ;
+// 	// wp_enqueue_script( 'jquery' );
+// 	wp_enqueue_script( 'quote-submission', $submit_script_url, array( 'jquery' ), microtime(), true );
+// 	// create a variable in server and give it the following properties
+//    wp_localize_script( 'quote-submission', 'new_quote', array(
+// 	   'rest_url' => esc_url_raw( rest_url() ),
+// 	   'wpapi_nonce' => wp_create_nonce( 'wp_create_post' ),
+//    ) );
+//  }
+//  add_action( 'wp_enqueue_scripts', 'quote_submit' );
  

@@ -4,6 +4,8 @@
     const $authorArea = $('.author-area')
 
 
+   //  Home Page - Get a Quote
+
     $('.show-more').on('click', function(event) {
        event.preventDefault();
         // clear the quote and author divs
@@ -11,10 +13,10 @@
         $authorArea.empty()
        
        $.ajax({
-          method: 'get',
-          url: red_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&per_page=1',
+          method: 'GET',
+          url: dev_quote.rest_url + 'wp/v2/posts?filter[orderby]=rand&per_page=1',
           beforeSend: function(xhr) {
-             xhr.setRequestHeader( 'X-WP-Nonce', red_vars.wpapi_nonce );
+             xhr.setRequestHeader( 'X-WP-Nonce', dev_quote.wpapi_nonce );
           }
        }).done( function(quote) {
           console.log('Success! Here\'s another quote.');
@@ -39,4 +41,68 @@
 
        });
     });
+
+
+   //  Submit a Quote
+
+   console.log("kayla is here")
+    const $quoteForm = $('#quote-submission-form')
+    
+    $quoteForm.submit(function(e) {
+        e.preventDefault()
+        console.log('button has been pushed')
+        let $quote = $('#the-quote').val()
+        console.log($quote)
+        let $quoteAuthor = $('#author').val()
+        console.log($quoteAuthor)
+        let $quoteSource = $('#quote-source').val()
+        console.log($quoteSource)
+        let $quoteSourceUrl = $('#quote-source-url').val()
+        console.log($quoteSourceUrl);
+
+        console.log('aer we getting anywhere?');
+
+
+
+        let jsonObj = {
+            title: $quoteAuthor,
+            content: $('#the-quote').val(),
+            _qod_quote_source: $quoteSource,
+            _qod_quote_source_url: $quoteSourceUrl,
+            status: 'publish',
+            type: 'post',
+            slug: 'slug'
+        }
+
+        console.log('jsonObj', jsonObj)
+
+        let string = JSON.stringify(jsonObj)
+        console.log(string)
+
+        
+
+        $.ajax({
+            method: 'POST',
+            url: dev_quote.rest_url + 'wp/v2/posts',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            data: JSON.stringify(jsonObj),
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader( 'X-WP-Nonce', dev_quote.wpapi_nonce ); 
+        }
+        })
+        .done(function(response) {
+           console.log('it worked?')
+            console.log(response)
+        })
+        .fail(function(response) {
+            console.log('of course it didn\'t work')
+            console.log(response)
+        })
+
+    })
+
+
+
+
  })( jQuery );
