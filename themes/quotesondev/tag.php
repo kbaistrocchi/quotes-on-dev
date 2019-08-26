@@ -12,29 +12,34 @@ get_header(); ?>
 
 		
 
-			<?php $args = array(
-				'post_type' => 'post',
-				'posts_per_page' => -1
-			);?>
+		<?php
+        if( have_posts() ) : 
+            while( have_posts() ) :   
+            the_post(); ?>         
 
-			<?php $archives_list = new WP_Query( $args );
-			if ( $archives_list->have_posts() ) : ?>
-				<div>Quote Authors: 
-				<?php while ( $archives_list->have_posts() ) : 
-				$archives_list->the_post(); ?>
-				
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-
-				</div>
-					
-				<?php endwhile; ?>
+        <div>
+            <h2><?php the_title(); ?></h2>
+				<h4><?php the_date('j F Y'); ?></h4>
 			
-			<?php else : ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-				<!-- <?php the_posts_navigation(); ?> -->
-			<?php endif; ?>
+           
+        </div>
+        
+            <?php the_content(); ?>
+		
+		<?php endwhile; ?>
+       
+           
+
+        <?php the_posts_navigation(); ?> 
+
+        <?php else : ?>
+                <p>No posts found</p>
+        <?php endif; ?>
+    </section>
 				
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
+
+

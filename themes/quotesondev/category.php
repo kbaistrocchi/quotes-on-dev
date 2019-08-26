@@ -10,28 +10,37 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<h2>Category: <?php single_cat_title(); ?></h2>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+	
+			<?php
+			if( have_posts() ) : 
+				while( have_posts() ) :   
+				the_post(); ?>         
+
+				<div class="archive-page">
+					<h3 class="quote-text"><?php the_content(); ?></h3>
+					<?php $customField = get_post_custom(); ?>
+					<p class="mobile-author">-<?php the_title()?></p>
+					<!-- Check if post has source and source url -->
+					<?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
+						<p>, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
+
+					<?php elseif(isset($customField['_qod_quote_source'])) : ?>
+						<p><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
+					<?php endif; ?>
+				
+				</div>
+			
+				<?php endwhile; ?>
+		
+			
+
+			<?php the_posts_navigation(); ?> 
+
+			<?php else : ?>
+					<p>No posts found</p>
 			<?php endif; ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content' ); ?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
