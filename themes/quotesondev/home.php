@@ -27,11 +27,7 @@ get_header(); ?>
                     </div>
                     <div class="author-area">
                         
-                        <?php $customField = get_post_custom();
-                        // echo '<pre>';
-                        // var_dump($customField); 
-                        // echo '</pre>'; 
-                        ?>
+                        <?php $customField = get_post_custom(); ?>
                         
                         <p class="mobile-author">-<?php the_title()?></p>
                         <!-- Check if post has source and source url -->
@@ -42,15 +38,13 @@ get_header(); ?>
                             <p><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
                         <?php endif; ?>
                         
-
                     </div>
                     <?php  
                             endwhile;
                         
                         else :
                             echo 'No posts found';
-                    endif;
-                        ?>
+                    endif; ?>
 
 		
         <button class="show-more">Show me another!</button>
