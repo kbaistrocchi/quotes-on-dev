@@ -20,7 +20,7 @@
     
     <!-- Submit Quote Form -->
 
-    <form action="" method="POST">
+    <form action="" method="POST" id="quote-submission-form">
         <label for="author">Author of Quote</label>
         <br>
         <input type="text" id="author" name="quote-author">
@@ -37,7 +37,6 @@
         <input type="text" id="quote-source-url" name="quote-source-url">
         <br>
         <input type="submit" value="Submit Quote">
-
     </form>
 
 
