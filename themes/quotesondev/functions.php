@@ -100,17 +100,7 @@ function quote_scripts() {
  }
  add_action( 'wp_enqueue_scripts', 'quote_scripts' );
 
- // Submit Quote Form
-// function quote_submit() {
-// 	// saving scripts into a variable
-// 	$submit_script_url = get_template_directory_uri() . '/js/form-submission.js' ;
-// 	// wp_enqueue_script( 'jquery' );
-// 	wp_enqueue_script( 'quote-submission', $submit_script_url, array( 'jquery' ), microtime(), true );
-// 	// create a variable in server and give it the following properties
-//    wp_localize_script( 'quote-submission', 'new_quote', array(
-// 	   'rest_url' => esc_url_raw( rest_url() ),
-// 	   'wpapi_nonce' => wp_create_nonce( 'wp_create_post' ),
-//    ) );
-//  }
-//  add_action( 'wp_enqueue_scripts', 'quote_submit' );
+
+
+
  

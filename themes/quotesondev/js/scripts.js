@@ -51,35 +51,31 @@
     $quoteForm.submit(function(e) {
         e.preventDefault()
         console.log('button has been pushed')
-        let $quote = $('#the-quote').val()
-        console.log($quote)
-        let $quoteAuthor = $('#author').val()
-        console.log($quoteAuthor)
-        let $quoteSource = $('#quote-source').val()
-        console.log($quoteSource)
-        let $quoteSourceUrl = $('#quote-source-url').val()
-        console.log($quoteSourceUrl);
 
-        console.log('aer we getting anywhere?');
+         let $quote = $('#the-quote').val()
+         console.log($quote)
+         let $quoteAuthor = $('#author').val()
+         console.log($quoteAuthor)
+         let $quoteSource = $('#quote-source').val()
+         console.log($quoteSource)
+         let $quoteSourceUrl = $('#quote-source-url').val()
+         console.log($quoteSourceUrl);
 
+         console.log('aer we getting anywhere?');
 
-
-        let jsonObj = {
+         let jsonObj = {
             title: $quoteAuthor,
-            content: $('#the-quote').val(),
+            content: $quote,
             _qod_quote_source: $quoteSource,
             _qod_quote_source_url: $quoteSourceUrl,
+            // change to pending
             status: 'publish',
             type: 'post',
             slug: 'slug'
-        }
+         }
 
         console.log('jsonObj', jsonObj)
 
-        let string = JSON.stringify(jsonObj)
-        console.log(string)
-
-        
 
         $.ajax({
             method: 'POST',
@@ -89,7 +85,7 @@
             data: JSON.stringify(jsonObj),
             beforeSend: function(xhr) {
                 xhr.setRequestHeader( 'X-WP-Nonce', dev_quote.wpapi_nonce ); 
-        }
+            }
         })
         .done(function(response) {
            console.log('it worked?')
@@ -100,7 +96,12 @@
             console.log(response)
         })
 
+         
+
+
     })
+        
+        
 
 
 
