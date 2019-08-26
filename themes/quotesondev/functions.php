@@ -100,13 +100,18 @@ function quote_scripts() {
  }
  add_action( 'wp_enqueue_scripts', 'quote_scripts' );
 
+ 
 
-function change_wp_search_size($queryVars) {
-    if ( isset($_REQUEST['s']) ) // Make sure it is a search page
-        $queryVars['posts_per_page'] = 10; // Change 10 to the number of posts you would like to show
-    return $queryVars; // Return our modified query variables
-}
-add_filter('request', 'change_wp_search_size'); 
+function searchfilter($query) {
+ 
+    if ($query->is_search) {
+        $query->set('posts_per_page', '3');
+    }
+	return $query;
+	}
+ 
+add_filter('pre_get_posts','searchfilter');
+
 
 
 
