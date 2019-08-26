@@ -13,6 +13,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

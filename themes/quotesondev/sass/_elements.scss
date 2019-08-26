@@ -75,6 +75,12 @@ table {
 // Custom Styling
 
 .quote-title-tag {
+  a {
+    color: $color__text-main;
+    &:visited {
+      color: $color__text-main;
+    }
+  }
   span {
     color: $color__text-screen;
     font-family: 'Exo light-italic';

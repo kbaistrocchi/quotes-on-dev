@@ -11,11 +11,12 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<h1>Footer!</h1>
-				<nav>
-					<?php wp_nav_menu( array('theme_location' => 'footer')); ?>
-				</nav>
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+					<p>Brought to you by <a href="<?php echo esc_url( 'https://redacademy.com/toronto/' ); ?>">Red Academy</a></p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

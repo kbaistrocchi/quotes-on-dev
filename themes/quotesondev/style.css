@@ -378,6 +378,11 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.quote-title-tag a {
+  color: #fff; }
+  .quote-title-tag a:visited {
+    color: #fff; }
+
 .quote-title-tag span {
   color: #00cc00;
   font-family: 'Exo light-italic'; }
@@ -479,6 +484,13 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0; }
+    .main-navigation ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .main-navigation ul li + li:before {
+      content: '|';
+      padding: 0 10px; }
     .main-navigation ul ul {
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
               box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);

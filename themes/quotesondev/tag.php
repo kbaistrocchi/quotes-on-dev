@@ -12,7 +12,6 @@ get_header(); ?>
 
 			<h2>Tag: <?php single_tag_title(); ?></h2>
 
-	
 			<?php
 			if( have_posts() ) : 
 				while( have_posts() ) :   
