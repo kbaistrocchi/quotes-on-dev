@@ -26,7 +26,22 @@ get_header(); ?>
                         <h3 class="quote-text"><?php the_content(); ?></h3>
                     </div>
                     <div class="author-area">
+                        
+                        <?php $customField = get_post_custom();
+                        // echo '<pre>';
+                        // var_dump($customField); 
+                        // echo '</pre>'; 
+                        ?>
+                        
                         <p class="mobile-author">-<?php the_title()?></p>
+                        <!-- Check if post has source and source url -->
+                        <?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
+                            <p>, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
+
+                        <?php elseif(isset($customField['_qod_quote_source'])) : ?>
+                            <p><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
+                        <?php endif; ?>
+                        
 
                     </div>
                     <?php  
