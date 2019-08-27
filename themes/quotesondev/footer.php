@@ -15,7 +15,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'Footer Menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<div class="site-info">
-					<p>Brought to you by <a href="<?php echo esc_url( 'https://redacademy.com/toronto/' ); ?>">Red Academy</a></p>
+					<p>Brought to you by <a href="<?php echo esc_url( 'https://redacademy.com/toronto/' ); ?>"><span class="all-caps">Red</span> Academy</a></p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
