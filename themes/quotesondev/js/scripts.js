@@ -44,8 +44,7 @@
 
 
    //  Submit a Quote
-
-   console.log("kayla is here")
+   
     const $quoteForm = $('#quote-submission-form')
     
     $quoteForm.submit(function(e) {
@@ -61,7 +60,6 @@
          let $quoteSourceUrl = $('#quote-source-url').val()
          console.log($quoteSourceUrl);
 
-         console.log('aer we getting anywhere?');
 
          let jsonObj = {
             title: $quoteAuthor,
@@ -88,7 +86,8 @@
             }
         })
         .done(function(response) {
-           console.log('it worked?')
+            $quoteForm[0].reset();
+            console.log('it worked?')
             console.log(response)
         })
         .fail(function(response) {

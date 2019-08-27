@@ -86,6 +86,7 @@ require get_template_directory() . '/inc/api.php';
 
 // API
 function quote_scripts() {
+	wp_enqueue_style('custom-fa', "https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 	// saving scripts into a variable - CHANGE TO MINIFIED LOCATION BEFORE DEPLOYMENT
 	$script_url = get_template_directory_uri() . '/js/scripts.js';
 	// wp_enqueue_script( 'jquery' );

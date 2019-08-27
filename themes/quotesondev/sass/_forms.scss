@@ -71,3 +71,20 @@ textarea {
 	width: 100%;
 	height: 80px;
 }
+
+// Search Icon/Button
+.no-show {
+	border: none;
+	width: auto;
+	height: auto;
+	padding: none;
+	&:hover {
+		border: none;
+		box-shadow: none;
+	}
+	&:active,
+	&:focus {
+		border-color: none;
+		box-shadow: none;
+	}
+}
