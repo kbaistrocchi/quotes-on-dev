@@ -503,16 +503,11 @@ nav ul {
   .main-navigation li + li:before {
     content: '|';
     padding: 0 10px; }
-  .main-navigation ul ul {
-    position: absolute;
-    top: 1.5rem;
-    left: -999rem;
-    z-index: 99999; }
-    .main-navigation ul ul li:hover > ul,
-    .main-navigation ul ul li.focus > ul {
-      left: 100%; }
-    .main-navigation ul ul a {
-      width: 200px; }
+  .main-navigation ul ul li:hover > ul,
+  .main-navigation ul ul li.focus > ul {
+    left: 100%; }
+  .main-navigation ul ul a {
+    width: 200px; }
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
     left: auto; }
@@ -553,8 +548,25 @@ nav ul {
   text-align: right;
   width: 50%; }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200px; }
+
 .menu li a {
   color: #00cc00; }
+
+.menu ul {
+  padding-left: 0;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
