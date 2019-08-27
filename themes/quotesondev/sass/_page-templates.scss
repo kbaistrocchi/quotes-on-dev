@@ -1,7 +1,17 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
+/* All Desktop Pages */
+@include desktop {
+    .content-area {
+        display: flex;
+        justify-content: center;
+    }
+    #main {
+        max-width: 70%;
+        margin: 0 3%;
+    }
+}
 
 
 /* All Archives Page */

@@ -8,6 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+    <i class="fas fa-quote-left"></i>
 		<main id="main" class="site-main" role="main">
             <!-- <h1>quotes <span>on</span> dev_</h1> -->
 
@@ -49,7 +50,8 @@ get_header(); ?>
 		
         <button class="show-more">Show me another!</button>
 
-		</main><!-- #main -->
+        </main><!-- #main -->
+        <i class="fas fa-quote-right"></i>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

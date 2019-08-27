@@ -176,6 +176,9 @@ footer {
 		justify-content: flex-start;
 		align-items: center;
 	};
+	@include desktop {
+		justify-content: flex-end;
+	}
 }
 
 .menu {

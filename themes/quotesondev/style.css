@@ -396,6 +396,10 @@ table {
 .author-area {
   margin-bottom: 40px; }
 
+.fa-quote-right, .fa-quote-left {
+  color: #00cc00;
+  font-size: 6rem; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -563,6 +567,11 @@ footer {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
+  @media only screen and (min-width: 1240px) {
+    footer {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
 
 .menu li a {
   color: #00cc00; }
@@ -684,6 +693,19 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* All Desktop Pages */
+@media only screen and (min-width: 1240px) {
+  .content-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  #main {
+    max-width: 70%;
+    margin: 0 3%; } }
+
 /* All Archives Page */
 .archive-block {
   margin-bottom: 40px; }
