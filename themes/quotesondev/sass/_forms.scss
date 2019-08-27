@@ -8,7 +8,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid $color__text-screen;
+	border: 2px solid $color__text-screen;
+	width: 200px;
+	height: 2.5rem;
 	// border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
 	background: $color__background-body;
@@ -18,6 +20,7 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .6rem 1rem .6rem;
 	text-transform: capitalize;
+	margin: 40px 0;
 	// text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 
 	&:hover {

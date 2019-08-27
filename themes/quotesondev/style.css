@@ -405,14 +405,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid #00cc00;
+  border: 2px solid #00cc00;
+  width: 200px;
+  height: 2.5rem;
   border-radius: 3px;
   background: #222222;
   color: #00cc00;
   font-size: .75rem;
   line-height: 1;
   padding: .6rem 1rem .6rem;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  margin: 40px 0; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,

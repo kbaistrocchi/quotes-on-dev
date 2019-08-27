@@ -31,7 +31,7 @@
           
         // Append Quotes and Meta to Respective Div
         $quoteZone.append(`<h3 class="quote-text">${theQuote}</h3>`)
-        $authorArea.append(`<p class="mobile-author">-${author}</p>`)
+        $authorArea.append(`<p class="mobile-author">&mdash; ${author}</p>`)
         if (source && sourceUrl) {
             $authorArea.append(`<p class="quote-source">, <a href="${sourceUrl}">${source}</a></p>`)
         }
