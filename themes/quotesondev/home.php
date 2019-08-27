@@ -32,10 +32,10 @@ get_header(); ?>
                         <p class="mobile-author">-<?php the_title()?></p>
                         <!-- Check if post has source and source url -->
                         <?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
-                            <p>, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
+                            <p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
 
                         <?php elseif(isset($customField['_qod_quote_source'])) : ?>
-                            <p><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
+                            <p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
                         <?php endif; ?>
                         
                     </div>

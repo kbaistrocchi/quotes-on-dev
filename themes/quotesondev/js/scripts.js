@@ -19,24 +19,24 @@
              xhr.setRequestHeader( 'X-WP-Nonce', dev_quote.wpapi_nonce );
           }
        }).done( function(quote) {
-          console.log('Success! Here\'s another quote.');
-          console.log(quote)
+        //   console.log('Success! Here\'s another quote.');
+        //   console.log(quote)
           let theQuote = quote[0].content.rendered
           let author = quote[0].title.rendered
-          console.log('author', author)
+        //   console.log('author', author)
           let source = quote[0]['_qod_quote_source']
-          console.log('source', source)
+        //   console.log('source', source)
           let sourceUrl = quote[0]['_qod_quote_source_url']
-          console.log('source url', sourceUrl)
+        //   console.log('source url', sourceUrl)
           
         // Append Quotes and Meta to Respective Div
-        $quoteZone.append(`<h2>${theQuote}</h2>`)
-        $authorArea.append(`<p>-${author}</p>`)
+        $quoteZone.append(`<h3 class="quote-text">${theQuote}</h3>`)
+        $authorArea.append(`<p class="mobile-author">-${author}</p>`)
         if (source && sourceUrl) {
-            $authorArea.append(`<span>, </span><a href="${sourceUrl}"><p class="quote-source">${source}</p></a>`)
+            $authorArea.append(`<p class="quote-source">, <a href="${sourceUrl}">${source}</a></p>`)
         }
         else if (source) {
-            $authorArea.append(`<span>, </span><p class="quote-source">${source}</p>`)
+            $authorArea.append(`<p class="quote-source">, ${source}</p>`)
         }
 
        });
