@@ -72,6 +72,8 @@ table {
 
 // Custom Styling
 
+// Header
+
 .quote-title-tag {
   a {
     color: $color__text-main;
@@ -84,6 +86,8 @@ table {
     font-family: 'Exo light-italic';
   }
 }
+
+// Content
 
 .quote-text {
   p {
@@ -99,4 +103,6 @@ table {
 .author-area {
   margin-bottom: 40px;
 }
+
+
 
