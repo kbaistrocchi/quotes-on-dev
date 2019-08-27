@@ -17,11 +17,11 @@
         <form action="" method="POST" id="quote-submission-form">
             <label for="author">Author of Quote</label>
             <br>
-            <input type="text" id="author" name="quote-author">
+            <input type="text" id="author" name="quote-author" required>
             <br>
             <label for="the-quote">Quote</label>
             <br>
-            <textarea id="the-quote" name="the-quote"></textarea>
+            <textarea id="the-quote" name="the-quote" required></textarea>
             <label for="quote-source">Where did you find this quote? (e.g. book name)</label>
             <br>
             <input type="text" id="quote-source" name="quote-source">
@@ -34,7 +34,8 @@
         </form>
 
     <?php else : ?>
-        <p>You must be logged in to submit a quote.</p>
+        <p>Sorry, you must be logged in to submit a quote.</p>
+        <a href="<?php echo wp_login_url(get_permalink());?>">Click here to log in.</a>
     <?php endif; ?>
 
 
