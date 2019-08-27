@@ -10,7 +10,7 @@ a {
 
 	&:visited {
 		// color: $color__link-visited;
-		color: $color__text-screen;
+		color: darken($color__text-screen, 10%);
 	}
 	&:hover,
 	&:focus,
