@@ -85,6 +85,10 @@ table {
     color: $color__text-screen;
     font-family: 'Exo light-italic';
   }
+  @include desktop {
+    text-align: center;
+    font-size: 3.5rem;
+  }
 }
 
 // Content
