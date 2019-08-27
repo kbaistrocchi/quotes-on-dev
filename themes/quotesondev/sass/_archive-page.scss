@@ -1,0 +1,9 @@
+.archive-list {
+    display: flex;
+    max-width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    a {
+        padding-right: 15px;
+    }
+}
