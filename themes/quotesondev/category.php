@@ -13,7 +13,6 @@ get_header(); ?>
 			<h2>Category: <?php single_cat_title(); ?></h2>
 			<hr>
 
-	
 			<?php
 			if( have_posts() ) : 
 				while( have_posts() ) :   
@@ -37,7 +36,6 @@ get_header(); ?>
 			
 				<?php endwhile; ?>
 		
-			
 
 				<?php qod_numbered_pagination(); ?>
 

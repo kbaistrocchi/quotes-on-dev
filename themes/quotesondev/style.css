@@ -690,7 +690,11 @@ object {
     font-family: "Exo light", sans-serif; }
   .archive-block .quote-source {
     display: inline;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-family: 'Exo light-italic'; }
+
+.number-pagination {
+  margin-top: 50px; }
 
 /* Submit a Quote Page */
 /* Home Page */
