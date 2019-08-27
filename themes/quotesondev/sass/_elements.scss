@@ -29,10 +29,8 @@ q {
 }
 
 hr {
-  background-color: $color__background-hr;
-  border: 0;
-  height: 1px;
-  margin-bottom: $base__space-unit;
+  border: 1px dotted $color__background-hr;
+  // margin-bottom: $base__space-unit;
 }
 
 ul,

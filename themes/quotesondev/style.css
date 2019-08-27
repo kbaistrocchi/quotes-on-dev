@@ -348,10 +348,7 @@ q {
     content: ''; }
 
 hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin-bottom: 1.5rem; }
+  border: 1px dotted #ccc; }
 
 ul,
 ol {
@@ -686,6 +683,15 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+.archive-block {
+  margin-bottom: 40px; }
+  .archive-block .archive-author {
+    display: inline;
+    font-family: "Exo light", sans-serif; }
+  .archive-block .quote-source {
+    display: inline;
+    font-size: 1.5rem; }
+
 /* Submit a Quote Page */
 /* Home Page */
 .archive-list {

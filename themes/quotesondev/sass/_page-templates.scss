@@ -6,6 +6,22 @@
 
 /* All Archives Page */
 
+// Categories / Tags
+.archive-block {
+    margin-bottom: 40px;
+    .archive-author {
+        display: inline;
+        font-family: $font__main;
+    }
+    .quote-source {
+        display: inline;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
 /* Submit a Quote Page */
 
 /* Home Page */
