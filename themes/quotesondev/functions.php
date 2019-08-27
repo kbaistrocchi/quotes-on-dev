@@ -105,7 +105,9 @@ function quote_scripts() {
 
 function searchfilter($query) {
     if ($query->is_search) {
-        $query->set('posts_per_page', '10');
+		$query->set('posts_per_page', '10');
+		$query->set('order', 'DESC');
+		$query->set('orderby', 'title');
     }
 	return $query;
 	}
