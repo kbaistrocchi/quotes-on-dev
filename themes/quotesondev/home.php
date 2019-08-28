@@ -47,8 +47,10 @@ get_header(); ?>
                             echo 'No posts found';
                     endif; ?>
 
-		
-        <button class="show-more">Show me another!</button>
+		<div class="show-more-btn-wrapper">
+            <button class="show-more">Show me another!</button>
+        </div>
+        
 
         </main><!-- #main -->
         <i class="fas fa-quote-right"></i>
