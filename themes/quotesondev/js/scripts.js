@@ -2,13 +2,15 @@
     // Global Variables
     const $quoteZone = $('.the-quote-zone')
     const $authorArea = $('.author-area')
+    const $homeQuote = $('.toggle-display')
 
 
    //  Home Page - Get a Quote
 
     $('.show-more').on('click', function(event) {
        event.preventDefault();
-        // clear the quote and author divs
+        // Clear the quote and author divs
+        $homeQuote.toggle('slow')
         $quoteZone.empty()
         $authorArea.empty()
        
@@ -19,17 +21,12 @@
              xhr.setRequestHeader( 'X-WP-Nonce', dev_quote.wpapi_nonce );
           }
        }).done( function(quote) {
-        //   console.log('Success! Here\'s another quote.');
-        //   console.log(quote)
           let theQuote = quote[0].content.rendered
           let author = quote[0].title.rendered
-        //   console.log('author', author)
           let source = quote[0]['_qod_quote_source']
-        //   console.log('source', source)
           let sourceUrl = quote[0]['_qod_quote_source_url']
-        //   console.log('source url', sourceUrl)
           
-        // Append Quotes and Meta to Respective Div
+        // Append Quotes and Info to Respective Div
         $quoteZone.append(`<h3 class="quote-text">${theQuote}</h3>`)
         $authorArea.append(`<p class="mobile-author">&mdash; ${author}</p>`)
         if (source && sourceUrl) {
@@ -38,6 +35,8 @@
         else if (source) {
             $authorArea.append(`<p class="quote-source">, ${source}</p>`)
         }
+        // Animate Quote Display
+        $homeQuote.toggle('slow')
 
        });
     });
@@ -67,9 +66,9 @@
             _qod_quote_source: $quoteSource,
             _qod_quote_source_url: $quoteSourceUrl,
             // change to pending
-            status: 'publish',
+            status: 'pending',
             type: 'post',
-            slug: 'slug'
+            slug: $quoteAuthor
          }
 
         console.log('jsonObj', jsonObj)

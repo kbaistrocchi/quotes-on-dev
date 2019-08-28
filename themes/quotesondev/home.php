@@ -22,24 +22,30 @@ get_header(); ?>
             if ( $initial_post->have_posts() ) :
                 while ( $initial_post->have_posts() ) :
                     $initial_post->the_post(); ?>
-                
-                    <div class="the-quote-zone">
-                        <h3 class="quote-text"><?php the_content(); ?></h3>
-                    </div>
-                    <div class="author-area">
-                        
-                        <?php $customField = get_post_custom(); ?>
-                        
-                        <p>&mdash; <?php the_title()?></p>
-                        <!-- Check if post has source and source url -->
-                        <?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
-                            <p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
+                    <div class="placeholder">
+                        <div class="toggle-display">
+                            <div class="the-quote-zone">
+                                <h3 class="quote-text"><?php the_content(); ?></h3>
+                            </div>
+                            <div class="author-area">
+                                
+                                <?php $customField = get_post_custom(); ?>
+                                
+                                <p>&mdash; <?php the_title()?></p>
+                                <!-- Check if post has source and source url -->
+                                <?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
+                                    <p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
 
-                        <?php elseif(isset($customField['_qod_quote_source'])) : ?>
-                            <p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
-                        <?php endif; ?>
-                        
+                                <?php elseif(isset($customField['_qod_quote_source'])) : ?>
+                                    <p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
+                                <?php endif; ?>
+                                
+                            </div>
+                        </div>
                     </div>
+                    
+                
+                    
                     <?php  
                             endwhile;
                         

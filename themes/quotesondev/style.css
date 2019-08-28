@@ -761,6 +761,10 @@ object {
 
 /* Submit a Quote Page */
 /* Home Page */
+@media only screen and (min-width: 1240px) {
+  .placeholder {
+    min-height: 6rem; } }
+
 .archive-list {
   display: -webkit-box;
   display: -ms-flexbox;
