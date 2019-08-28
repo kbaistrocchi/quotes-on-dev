@@ -462,12 +462,6 @@ input[type="submit"] {
     border-color: #aaa #bbb #bbb;
     -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-  @media only screen and (min-width: 1240px) {
-    button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-      margin: 0 auto 40px auto; } }
 
 input[type="submit"].submit-quote-btn {
   width: 150px; }
@@ -556,7 +550,6 @@ nav ul {
     display: -ms-flexbox;
     display: flex; }
 
-/* Small menu. */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {

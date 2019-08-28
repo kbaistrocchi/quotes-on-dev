@@ -48,7 +48,6 @@ get_header(); ?>
 				$tags = get_tags(array(
 					'hide_empty' => false
 				));
-				// var_dump($tags);
 				foreach($tags as $tag) : ?>
 					<a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>  
 				<?php endforeach; ?>

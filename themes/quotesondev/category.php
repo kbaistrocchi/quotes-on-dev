@@ -24,12 +24,13 @@ get_header(); ?>
 					<h3 class="quote-text"><?php the_content(); ?></h3>
 					<?php $customField = get_post_custom(); ?>
 					<h3 class="archive-author">&mdash; <?php the_title()?></h3>
+
 					<!-- Check if post has source and source url -->
 					<?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
-						<p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
+					<p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
 
 					<?php elseif(isset($customField['_qod_quote_source'])) : ?>
-						<p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
+					<p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
 					<?php endif; ?>
 				
 				</div>

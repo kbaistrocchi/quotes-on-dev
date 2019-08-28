@@ -32,20 +32,18 @@ get_header(); ?>
                                 <?php $customField = get_post_custom(); ?>
                                 
                                 <p>&mdash; <?php the_title()?></p>
+
                                 <!-- Check if post has source and source url -->
                                 <?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
-                                    <p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
+                                <p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>
 
                                 <?php elseif(isset($customField['_qod_quote_source'])) : ?>
-                                    <p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
+                                <p class="quote-source"><?php echo ', ' . $customField['_qod_quote_source'][0]; ?></p>
                                 <?php endif; ?>
                                 
                             </div>
                         </div>
                     </div>
-                    
-                
-                    
                     <?php  
                             endwhile;
                         

@@ -87,13 +87,8 @@ require get_template_directory() . '/inc/api.php';
 // API
 function quote_scripts() {
 	wp_enqueue_style('custom-fa', "https://use.fontawesome.com/releases/v5.8.2/css/all.css");
-	// saving scripts into a variable - CHANGE TO MINIFIED LOCATION BEFORE DEPLOYMENT
-	$script_url = get_template_directory_uri() . '/js/scripts.js';
-	// wp_enqueue_script( 'jquery' );
-	// first parameter is the id of the script/stylesheet, 2nd- source of the script, 3rd(optional) array of script handles(ex. jquery)
-	// 4th - version no. 5th - in the footer or not (default is false)
+	$script_url = get_template_directory_uri() . '/build/js/scripts.min.js';
 	wp_enqueue_script( 'dev_quotes', $script_url, array( 'jquery' ), microtime(), true );
-	// create a variable called red_vars in server and give it the following properties
    wp_localize_script( 'dev_quotes', 'dev_quote', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),

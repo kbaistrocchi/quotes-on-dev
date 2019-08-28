@@ -9,7 +9,6 @@ a {
 	text-decoration: none;
 
 	&:visited {
-		// color: $color__link-visited;
 		color: darken($color__text-screen, 10%);
 	}
 	&:hover,
@@ -35,7 +34,6 @@ nav {
 		display: flex;
 		li {
 			display: flex;
-			// justify-content: flex-start;
 		}
 		
 	}
@@ -47,101 +45,13 @@ nav {
 	display: block;
 	float: left;
 	width: 100%;
-	// padding-left: 0;
 
 	li {
 		display: flex;
-		// justify-content: flex-start;
 	}
-
-	// li + li:before {
-	// 	content: '|';
-	// 	padding: 0 10px;
-	// }
-
-	
-
-	// ul {
-	// 	display: none;
-	// 	list-style: none;
-		// margin: 0;
-		// padding-left: 0;
-
-		
-
-		// ul {
-		// 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			// float: left;
-			// position: absolute;
-			// top: $base__space-unit;
-			// left: -999rem;
-			// z-index: 99999;
-			// padding-left: 0;	
-
-			// ul {
-			// 	left: -999rem;
-			// 	top: 0;
-			// }
-
-	// 		li {
-	// 			&:hover > ul,
-	// 			&.focus > ul {
-	// 				left: 100%;
-	// 			}
-	// 		}
-
-	// 		a {
-	// 			width: 200px;
-	// 		}
-
-	// 		:hover > a,
-	// 		.focus > a {
-	// 		}
-
-	// 		a:hover,
-	// 		a.focus {
-	// 		}
-	// 	}
-
-	// 	li:hover > ul,
-	// 	li.focus > ul {
-	// 		left: auto;
-	// 	}
-	// }
-	// li {
-	// 	float: left;
-	// 	position: relative;
-
-	// 	&:hover > a,
-	// 	&.focus > a {
-	// 	}
-	// }
-	// a {
-	// 	display: block;
-	// 	text-decoration: none;
-	// }
-
-	// .current_page_item > a,
-	// .current-menu-item > a,
-	// .current_page_ancestor > a {
-	// }
 
 }
 
-/* Small menu. */
-// .menu-toggle,
-// .main-navigation.toggled ul {
-// 	display: block;
-// }
-
-// @media screen and (min-width: 768px) {
-// 	.menu-toggle {
-// 		display: none;
-// 	}
-// 	.main-navigation ul {
-// 		display: block;
-// 	}
-// }
 
 .comment-navigation,
 .posts-navigation,
