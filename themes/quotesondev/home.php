@@ -30,7 +30,7 @@ get_header(); ?>
                         
                         <?php $customField = get_post_custom(); ?>
                         
-                        <p class="mobile-author">&mdash; <?php the_title()?></p>
+                        <p>&mdash; <?php the_title()?></p>
                         <!-- Check if post has source and source url -->
                         <?php if(isset($customField['_qod_quote_source']) && isset($customField['_qod_quote_source_url'])) : ?>
                             <p class="quote-source">, <a href="<?php echo $customField['_qod_quote_source_url'][0]; ?>"><?php echo  $customField['_qod_quote_source'][0]; ?></a></p>

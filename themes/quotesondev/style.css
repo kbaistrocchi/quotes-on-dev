@@ -271,6 +271,9 @@ h1 {
 
 h2 {
   font-size: 2.5rem; }
+  @media only screen and (min-width: 1240px) {
+    h2 {
+      margin-top: 0; } }
 
 h3 {
   font-size: 1.5rem; }
@@ -397,6 +400,15 @@ table {
 .author-area p {
   font-size: 1.5rem;
   display: inline; }
+  @media only screen and (min-width: 1240px) {
+    .author-area p {
+      font-size: 1rem; } }
+
+.author-area .quote-source {
+  font-family: 'Exo light-italic'; }
+  @media only screen and (min-width: 1240px) {
+    .author-area .quote-source {
+      font-size: 1rem; } }
 
 .author-area {
   margin-bottom: 40px; }
@@ -733,10 +745,16 @@ object {
   .archive-block .archive-author {
     display: inline;
     font-family: "Exo light", sans-serif; }
+    @media only screen and (min-width: 1240px) {
+      .archive-block .archive-author {
+        font-size: 1rem; } }
   .archive-block .quote-source {
     display: inline;
     font-size: 1.5rem;
     font-family: 'Exo light-italic'; }
+    @media only screen and (min-width: 1240px) {
+      .archive-block .quote-source {
+        font-size: 1rem; } }
 
 .number-pagination {
   margin-top: 50px; }

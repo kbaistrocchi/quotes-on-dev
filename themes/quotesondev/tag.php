@@ -8,6 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+	<i class="fas fa-quote-left"></i>
 		<main id="main" class="site-main" role="main">
 
 			<h2>Tag: <?php single_tag_title(); ?></h2>
@@ -44,6 +45,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 		</main><!-- #main -->
+		<i class="fas fa-quote-right"></i>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
