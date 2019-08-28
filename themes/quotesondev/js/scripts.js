@@ -3,6 +3,8 @@
     const $quoteZone = $('.the-quote-zone')
     const $authorArea = $('.author-area')
     const $homeQuote = $('.toggle-display')
+    const $quoteSubmitMsg = $('.thanks-display')
+    const $quoteSubmitErr = $('.error-msg')
 
 
    //  Home Page - Get a Quote
@@ -48,16 +50,11 @@
     
     $quoteForm.submit(function(e) {
         e.preventDefault()
-        console.log('button has been pushed')
 
          let $quote = $('#the-quote').val()
-         console.log($quote)
          let $quoteAuthor = $('#author').val()
-         console.log($quoteAuthor)
          let $quoteSource = $('#quote-source').val()
-         console.log($quoteSource)
          let $quoteSourceUrl = $('#quote-source-url').val()
-         console.log($quoteSourceUrl);
 
 
          let jsonObj = {
@@ -65,13 +62,10 @@
             content: $quote,
             _qod_quote_source: $quoteSource,
             _qod_quote_source_url: $quoteSourceUrl,
-            // change to pending
             status: 'pending',
             type: 'post',
             slug: $quoteAuthor
          }
-
-        console.log('jsonObj', jsonObj)
 
 
         $.ajax({
@@ -85,13 +79,12 @@
             }
         })
         .done(function(response) {
-            $quoteForm[0].reset();
-            console.log('it worked?')
-            console.log(response)
+            $quoteForm[0].reset()
+            $quoteSubmitMsg.fadeIn()
+
         })
         .fail(function(response) {
-            console.log('of course it didn\'t work')
-            console.log(response)
+            $quoteSubmitErr.fadeIn()
         })
 
          

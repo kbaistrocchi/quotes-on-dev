@@ -34,6 +34,16 @@
             <input type="submit" class="submit-quote-btn" value="Submit Quote">
         </form>
 
+        <div class="thanks-display hide-it">
+            <p>Thank you for submitting a quote! <br> 
+            It will appear in the Archives page as soon as it has been approved.</p>
+        </div>
+
+        <div class="error-msg hide-it">
+            <p>Something went wrong :( <br> 
+            Your quote has not been submitted. Please try again or contact the site admin for assistance.</p>
+        </div>
+
     <?php else : ?>
         <p>Sorry, you must be logged in to submit a quote.</p>
         <a href="<?php echo wp_login_url(get_permalink());?>">Click here to log in.</a>

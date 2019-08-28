@@ -50,6 +50,11 @@
 
 /* Submit a Quote Page */
 
+.hide-it {
+    font-size: 125%;
+    display: none;
+}
+
 /* Home Page */
 .placeholder {
     @include desktop {
